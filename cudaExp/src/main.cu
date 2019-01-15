@@ -28,8 +28,14 @@ void GPUassignePointsToBlocks(float* dev_points, int* dev_block_of_pts,float sid
  * 2nd param -> grid dimensions     (default 2^1)
  * 3rd param -> seed                (default 1,2)
 *************************************************/
+void getDeviceInfo(){
+    cudaDeviceProp cp;
+    cudaGetDeviceProperties(&cp,0);
+    printf("%s %d %d\n",cp.name,cp.major,cp.minor);
+    printf("Global Memory: %lu\n", cp.totalGlobalMem);
+}
 int main(int argc, char** argv){
-
+    getDeviceInfo();
     cudaDeviceReset();
     struct timeval totalProgramStart,totalProgramEnd,tstart,tend;
     gettimeofday(&totalProgramStart,NULL);

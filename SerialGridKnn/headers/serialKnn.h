@@ -31,11 +31,10 @@ void rearrangePointsToGrid(float *points,float* gird_of_points,
                             int grid_d, int dimensions);
 
 
-void searchKnnInBlock(float* points_to_search,
-                    int number_of_points_to_search,
-                    float* query,
-                    int dimensions,
-                    kNeighbours* knn_str);
+
+void searchKnnInBlock(float* points_to_search, int number_of_points_to_search,
+                    float* query, int dimensions,
+                    float* knn, float* knns_dist);
 
 
 

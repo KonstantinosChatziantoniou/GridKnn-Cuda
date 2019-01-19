@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.cu": "c"
+    },
+    "python.pythonPath": "/usr/bin/python3"
+}

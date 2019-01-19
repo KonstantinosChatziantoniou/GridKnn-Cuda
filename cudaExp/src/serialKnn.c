@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-#include <omp.h>
 
 #include "../headers/pointsHelper.h"
 #include "../headers/serialKnn.h"
@@ -19,51 +18,10 @@ void assignPointsToBlocks(float *points, int* block_of_point, int* points_per_bl
 
     for(int i = 0; i < number_of_points; i++){
         for(int j = 0; j < dimensions; j++){
-            //block_of_point[i*dimensions + j] = (int)floor(points[i*dimensions+j]/side_length);
-
-            block_of_point[i*dimensions + j] = points[i*dimensions+j]/side_length;
-            if((int)(points[i*dimensions+j]/side_length) != (int)floor(points[i*dimensions+j]/side_length)){
-                printf("FLOOOR necessary %d %d\n",(int)(points[i*dimensions+j]/side_length), (int)floor(points[i*dimensions+j]/side_length));
-            }
+            block_of_point[i*dimensions + j] = (int)floor(points[i*dimensions+j]/side_length);
         }
         points_per_block[grid_d*grid_d*block_of_point[i*dimensions] + grid_d*block_of_point[i*dimensions+1] + block_of_point[i*dimensions+2]]++;
     }
-
-    for(int i = 0; i < grid_d; i++){
-        for(int j = 0 ; j < grid_d; j++){
-            for(int k = 0; k < grid_d; k++){
-                //printf("block%d%d%d %d points => %d\n",i,j,k,i*grid_d*grid_d + j*grid_d + k,points_per_block[i*grid_d*grid_d + j*grid_d + k]);
-            }
-        }
-    }
-
-}
-
-void parrallelAssignPointsToBlocks(float *points, int* block_of_point, int* points_per_block, float side_length, int number_of_points, int grid_d, int dimensions){
-    #pragma omp parallel for 
-    
-        for(int i = 0; i < grid_d*grid_d*grid_d; i++){
-            points_per_block[i] = 0;
-        }
-    
-    #pragma omp parallel for 
-    
-        for(int i = 0; i < number_of_points; i++){
-            for(int j = 0; j < dimensions; j++){
-                //block_of_point[i*dimensions + j] = (int)floor(points[i*dimensions+j]/side_length);
-
-                block_of_point[i*dimensions + j] = points[i*dimensions+j]/side_length;
-                if((int)(points[i*dimensions+j]/side_length) != (int)floor(points[i*dimensions+j]/side_length)){
-                    printf("FLOOOR necessary %d %d\n",(int)(points[i*dimensions+j]/side_length), (int)floor(points[i*dimensions+j]/side_length));
-                }
-            }
-            points_per_block[grid_d*grid_d*block_of_point[i*dimensions] + grid_d*block_of_point[i*dimensions+1] + block_of_point[i*dimensions+2]]++;
-        }
-    
-
-    for(int i = 0; i < number_of_points; i++){
-            points_per_block[grid_d*grid_d*block_of_point[i*dimensions] + grid_d*block_of_point[i*dimensions+1] + block_of_point[i*dimensions+2]]++;
-        }
 
     for(int i = 0; i < grid_d; i++){
         for(int j = 0 ; j < grid_d; j++){
@@ -110,11 +68,14 @@ void rearrangePointsToGrid(float *points,float* gird_of_points,
 
 void searchKnnInBlock(float* points_to_search, int number_of_points_to_search,
                     float* query, int dimensions,
-                    kNeighbours* knn_str)
+                    float* knn, float* knns_dist)
 {
     for(int p = 0; p < number_of_points_to_search; p++){
         float temp_dist = distanceEucl(query, &points_to_search[p*dimensions], dimensions);
-        addNeighbour(knn_str,&points_to_search[p*dimensions],temp_dist, dimensions);
+        if(temp_dist < *knns_dist){
+            memcpy(knn,&points_to_search[p*dimensions],dimensions*sizeof(float));
+            *knns_dist = temp_dist;
+        }
     }
 
 
@@ -126,7 +87,7 @@ void addNeighbour(kNeighbours* kn, float* point, float dist, int dimensions){
         memcpy(&(kn->nb_points[kn->num_of_nbrs*dimensions]), point ,dimensions*sizeof(float));
         kn->dists[kn->num_of_nbrs] = dist;
         kn->num_of_nbrs++;
-        //printf("added points with non full nblist n = %d, dist = %f ",kn->num_of_nbrs-1,dist);
+        //printf("added points with non full nblist n = %d,  ",kn->num_of_nbrs-1);
         //printPoints(point,1,dimensions);
         if(kn->num_of_nbrs == kn->k){
             kn->max_dist = -1;

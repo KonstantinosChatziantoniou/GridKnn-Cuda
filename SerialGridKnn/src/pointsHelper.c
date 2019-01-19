@@ -27,9 +27,9 @@ void printPointsToCsv(const char* name,const char* mode ,float* points, int numb
     FILE* file = fopen(name,mode);
     for(int i = 0; i < numberOfPoints; i++){
         for(int j = 0; j < dimensions-1; j++){
-            fprintf(file,"%f,",points[i*dimensions+j]);
+            fprintf(file,"%.12f,",points[i*dimensions+j]);
         }
-        fprintf(file,"%f\n",points[i*dimensions + dimensions -1]);
+        fprintf(file,"%.12f\n",points[i*dimensions + dimensions -1]);
     }
     fclose(file);
 }

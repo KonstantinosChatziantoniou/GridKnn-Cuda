@@ -68,11 +68,14 @@ void rearrangePointsToGrid(float *points,float* gird_of_points,
 
 void searchKnnInBlock(float* points_to_search, int number_of_points_to_search,
                     float* query, int dimensions,
-                    kNeighbours* knn_str)
+                    float* knn, float* knns_dist)
 {
     for(int p = 0; p < number_of_points_to_search; p++){
         float temp_dist = distanceEucl(query, &points_to_search[p*dimensions], dimensions);
-        addNeighbour(knn_str,&points_to_search[p*dimensions],temp_dist, dimensions);
+        if(temp_dist < *knns_dist){
+            memcpy(knn,&points_to_search[p*dimensions],dimensions*sizeof(float));
+            *knns_dist = temp_dist;
+        }
     }
 
 

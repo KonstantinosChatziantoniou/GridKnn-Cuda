@@ -1,0 +1,835 @@
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6930)  (format=lualatex 2019.1.22)  27 JAN 2019 18:11
+ restricted system commands enabled.
+**assignment3.tex
+(./assignment3.tex
+LaTeX2e <2018-12-01>
+Lua module: luaotfload-main 2018-12-19 2.94 luaotfload entry point
+Lua module: luaotfload-init 2018-12-19 2.94 luaotfload submodule / initializatio
+n
+Lua module: lualibs 2018-12-19 2.62 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2018-12-19 2.62 ConTeXt Lua libraries -- extended c
+ollection.
+Lua module: luaotfload-log 2018-12-19 2.94 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2018-12-19 2.94 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2018-12-19 2.94 luaotfload submodule / conf
+ig file reader
+luaotfload | conf : Root cache directory is /home/kotsarelos/.miktex/texmfs/data
+/luatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2018-12-19.lua” from kpse
+-resolved path “/usr/local/share/miktex-texmf/tex/luatex/luaotfload/fontloader
+-2018-12-19.lua”.
+Lua-only attribute luaotfload@state = 1
+Lua-only attribute luaotfload@noligature = 2
+Lua-only attribute luaotfload@syllabe = 3
+luaotfload | init : Context OpenType loader version “3.107”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Lua module: luaotfload-loaders 2018-12-19 2.94 luaotfload submodule / callback h
+andling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2018-12-19 2.94 luaotfload submodule / database
+Lua module: luaotfload-colors 2018-12-19 2.94 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 4
+Lua module: luaotfload-resolvers 2018-12-19 2.94 luaotfload submodule / resolver
+s
+luaotfload | conf : Root cache directory is /home/kotsarelos/.miktex/texmfs/data
+/luatex-cache/generic/names.
+Lua module: luaotfload-features 2018-12-19 2.94 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2018-12-19 2.94 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2018-12-19 2.94 luaotfload submodule / auxiliar
+y functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.088 seconds
+(/usr/local/share/miktex-texmf/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/local/share/miktex-texmf/tex/latex/base/size10.clo
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /home/kotsarelos/.miktex/texmf
+s/data/luatex-cache/generic/names/luaotfload-names.luc)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/share/miktex-texmf/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks14
+\AP@partial=\box27
+\AP@footins=\box28
+)
+(/usr/local/share/miktex-texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/share/miktex-texmf/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/share/miktex-texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/share/miktex-texmf/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/share/miktex-texmf/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 99.
+
+(/usr/local/share/miktex-texmf/tex/latex/graphics-def/luatex.def
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/share/miktex-texmf/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count88
+\float@exts=\toks16
+\float@box=\box29
+\@float@everytoks=\toks17
+\@floatcapt=\box30
+)
+(/usr/local/share/miktex-texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+
+(/usr/local/share/miktex-texmf/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+(/usr/local/share/miktex-texmf/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: luatex-loader 2016/05/16 v0.6 Lua module loader (HO)
+
+(/usr/local/share/miktex-texmf/scripts/oberdiek/oberdiek.luatex.lua)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks18
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \AP@enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/share/miktex-texmf/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/share/miktex-texmf/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/share/miktex-texmf/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen105
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
+
+(/usr/local/share/miktex-texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count91
+
+(/usr/local/share/miktex-texmf/tex/latex/00miktex/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count92
+
+(/home/kotsarelos/.miktex/texmfs/install/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen106
+\Fld@menulength=\count93
+\Field@Width=\dimen107
+\Fld@charsize=\dimen108
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count94
+\c@Item=\count95
+\c@Hfootnote=\count96
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+
+(/usr/local/share/miktex-texmf/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2018/11/30 v6.88e Hyperref driver for luaTeX
+\Fld@listcount=\count97
+\c@bookmark@seq@number=\count98
+
+(/usr/local/share/miktex-texmf/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
+2.
+)
+\Hy@SectionHShift=\skip43
+)
+(/usr/local/share/miktex-texmf/tex/latex/fontspec/fontspec.sty
+(/home/kotsarelos/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.sty
+(/home/kotsarelos/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
+Package: expl3 2019-01-13 L3 programming layer (loader) 
+
+(/home/kotsarelos/.miktex/texmfs/install/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2019-01-13 L3 programming layer (code)
+\ucharcat@table=\catcodetable5
+\c_max_int=\count99
+\l_tmpa_int=\count100
+\l_tmpb_int=\count101
+\g_tmpa_int=\count102
+\g_tmpb_int=\count103
+\g__kernel_prg_map_int=\count104
+\c_log_iow=\count105
+\l_iow_line_count_int=\count106
+\l__iow_line_target_int=\count107
+\l__iow_one_indent_int=\count108
+\l__iow_indent_int=\count109
+\c_zero_dim=\dimen109
+\c_max_dim=\dimen110
+\l_tmpa_dim=\dimen111
+\l_tmpb_dim=\dimen112
+\g_tmpa_dim=\dimen113
+\g_tmpb_dim=\dimen114
+\c_zero_skip=\skip44
+\c_max_skip=\skip45
+\l_tmpa_skip=\skip46
+\l_tmpb_skip=\skip47
+\g_tmpa_skip=\skip48
+\g_tmpb_skip=\skip49
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
+\l_keys_choice_int=\count110
+\l__intarray_loop_int=\count111
+\c__intarray_sp_dim=\dimen115
+\g__intarray_font_int=\count112
+\c__fp_leading_shift_int=\count113
+\c__fp_middle_shift_int=\count114
+\c__fp_trailing_shift_int=\count115
+\c__fp_big_leading_shift_int=\count116
+\c__fp_big_middle_shift_int=\count117
+\c__fp_big_trailing_shift_int=\count118
+\c__fp_Bigg_leading_shift_int=\count119
+\c__fp_Bigg_middle_shift_int=\count120
+\c__fp_Bigg_trailing_shift_int=\count121
+\g__fp_array_int=\count122
+\l__fp_array_loop_int=\count123
+\l__sort_length_int=\count124
+\l__sort_min_int=\count125
+\l__sort_top_int=\count126
+\l__sort_max_int=\count127
+\l__sort_true_max_int=\count128
+\l__sort_block_int=\count129
+\l__sort_begin_int=\count130
+\l__sort_end_int=\count131
+\l__sort_A_int=\count132
+\l__sort_B_int=\count133
+\l__sort_C_int=\count134
+\l__tl_analysis_normal_int=\count135
+\l__tl_analysis_index_int=\count136
+\l__tl_analysis_nesting_int=\count137
+\l__tl_analysis_type_int=\count138
+\l__regex_internal_a_int=\count139
+\l__regex_internal_b_int=\count140
+\l__regex_internal_c_int=\count141
+\l__regex_balance_int=\count142
+\l__regex_group_level_int=\count143
+\l__regex_mode_int=\count144
+\c__regex_cs_in_class_mode_int=\count145
+\c__regex_cs_mode_int=\count146
+\l__regex_catcodes_int=\count147
+\l__regex_default_catcodes_int=\count148
+\c__regex_catcode_L_int=\count149
+\c__regex_catcode_O_int=\count150
+\c__regex_catcode_A_int=\count151
+\c__regex_all_catcodes_int=\count152
+\l__regex_show_lines_int=\count153
+\l__regex_min_state_int=\count154
+\l__regex_max_state_int=\count155
+\l__regex_left_state_int=\count156
+\l__regex_right_state_int=\count157
+\l__regex_capturing_group_int=\count158
+\l__regex_min_pos_int=\count159
+\l__regex_max_pos_int=\count160
+\l__regex_curr_pos_int=\count161
+\l__regex_start_pos_int=\count162
+\l__regex_success_pos_int=\count163
+\l__regex_curr_char_int=\count164
+\l__regex_curr_catcode_int=\count165
+\l__regex_last_char_int=\count166
+\l__regex_case_changed_char_int=\count167
+\l__regex_curr_state_int=\count168
+\l__regex_step_int=\count169
+\l__regex_min_active_int=\count170
+\l__regex_max_active_int=\count171
+\l__regex_replacement_csnames_int=\count172
+\l__regex_match_count_int=\count173
+\l__regex_min_submatch_int=\count174
+\l__regex_submatch_int=\count175
+\l__regex_zeroth_submatch_int=\count176
+\g__regex_trace_regex_int=\count177
+\c_empty_box=\box31
+\l_tmpa_box=\box32
+\l_tmpb_box=\box33
+\g_tmpa_box=\box34
+\g_tmpb_box=\box35
+\l__box_top_dim=\dimen116
+\l__box_bottom_dim=\dimen117
+\l__box_left_dim=\dimen118
+\l__box_right_dim=\dimen119
+\l__box_top_new_dim=\dimen120
+\l__box_bottom_new_dim=\dimen121
+\l__box_left_new_dim=\dimen122
+\l__box_right_new_dim=\dimen123
+\l__box_internal_box=\box36
+\l__coffin_internal_box=\box37
+\l__coffin_internal_dim=\dimen124
+\l__coffin_offset_x_dim=\dimen125
+\l__coffin_offset_y_dim=\dimen126
+\l__coffin_x_dim=\dimen127
+\l__coffin_y_dim=\dimen128
+\l__coffin_x_prime_dim=\dimen129
+\l__coffin_y_prime_dim=\dimen130
+\c_empty_coffin=\box38
+\l__coffin_aligned_coffin=\box39
+\l__coffin_aligned_internal_coffin=\box40
+\l_tmpa_coffin=\box41
+\l_tmpb_coffin=\box42
+\l__coffin_display_coffin=\box43
+\l__coffin_display_coord_coffin=\box44
+\l__coffin_display_pole_coffin=\box45
+\l__coffin_display_offset_dim=\dimen131
+\l__coffin_display_x_dim=\dimen132
+\l__coffin_display_y_dim=\dimen133
+\g__file_internal_ior=\read1
+\l__coffin_bounding_shift_dim=\dimen134
+\l__coffin_left_corner_dim=\dimen135
+\l__coffin_right_corner_dim=\dimen136
+\l__coffin_bottom_corner_dim=\dimen137
+\l__coffin_top_corner_dim=\dimen138
+\l__coffin_scaled_total_height_dim=\dimen139
+\l__coffin_scaled_width_dim=\dimen140
+\l__seq_internal_a_int=\count178
+\l__seq_internal_b_int=\count179
+)
+(/home/kotsarelos/.miktex/texmfs/install/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2019-01-13 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count180
+))
+Package: xparse 2018-10-17 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count181
+\g__xparse_grabber_int=\count182
+\l__xparse_m_args_int=\count183
+\l__xparse_mandatory_args_int=\count184
+\l__xparse_v_nesting_int=\count185
+)
+Package: fontspec 2019/01/18 v2.6l Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2019/01/18 2.6l Font selection for XeLaTeX and LuaLaTeX
+(/usr/local/share/miktex-texmf/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2019/01/18 v2.6l Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count186
+\l__fontspec_language_int=\count187
+\l__fontspec_strnum_int=\count188
+\l__fontspec_tmp_int=\count189
+\l__fontspec_tmpa_int=\count190
+\l__fontspec_tmpb_int=\count191
+\l__fontspec_tmpc_int=\count192
+\l__fontspec_em_int=\count193
+\l__fontspec_emdef_int=\count194
+\l__fontspec_strong_int=\count195
+\l__fontspec_strongdef_int=\count196
+\l__fontspec_tmpa_dim=\dimen141
+\l__fontspec_tmpb_dim=\dimen142
+\l__fontspec_tmpc_dim=\dimen143
+
+(/usr/local/share/miktex-texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+(/usr/local/share/miktex-texmf/tex/latex/base/tuenc.def
+File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
+))
+(/usr/local/share/miktex-texmf/tex/latex/fontspec/fontspec.cfg)
+LaTeX Info: Redefining \itshape on input line 3681.
+LaTeX Info: Redefining \slshape on input line 3686.
+LaTeX Info: Redefining \scshape on input line 3691.
+LaTeX Info: Redefining \upshape on input line 3696.
+LaTeX Info: Redefining \em on input line 3726.
+LaTeX Info: Redefining \emph on input line 3751.
+LaTeX Info: Redefining \- on input line 3805.
+))
+luaotfload | cache : Lookup cache loaded from /home/kotsarelos/.miktex/texmfs/da
+ta/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
+luaotfload | aux : font no 28 (nil) defines no feature for script dflt
+luaotfload | aux : no font with id 28
+
+Package fontspec Info: Font "GFSArtemisia" does not contain any OpenType
+(fontspec)             `Script' information.
+
+
+Package fontspec Info: Could not resolve font "GFSArtemisia/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'GFSArtemisia(0)' created for font 'GFS
+(fontspec)             Artemisia' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"GFSArtemisia:mode=node;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"GFSArtemisia:mode=node;+tlig;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
+(fontspec)             <->"GFSArtemisia/B:mode=node;+tlig;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
+(fontspec)             <->"GFSArtemisia/B:mode=node;+tlig;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"GFSArtemisia/I:mode=node;+tlig;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
+(fontspec)             <->"GFSArtemisia/I:mode=node;+tlig;+smcp;"
+
+LaTeX Info: Redefining \rmfamily on input line 10.
+
+(/usr/local/share/miktex-texmf/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+\Gm@cnth=\count197
+\Gm@cntv=\count198
+\c@Gm@tempcnt=\count199
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks19
+
+(/usr/local/share/miktex-texmf/tex/latex/geometry/geometry.cfg))
+(/usr/local/share/miktex-texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/share/miktex-texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks20
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/home/kotsarelos/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/share/miktex-texmf/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(./assignment3.aux)
+\openout1 = assignment3.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+
+(/home/kotsarelos/.miktex/texmfs/install/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count266
+\scratchdimen=\dimen152
+\scratchbox=\box46
+\nofMPsegments=\count267
+\nofMParguments=\count268
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count269
+\MPscratchDim=\dimen153
+\MPnumerator=\count270
+\makeMPintoPDFobject=\count271
+\everyMPtoPDFconversion=\toks22
+) (/usr/local/share/miktex-texmf/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/share/miktex-texmf/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
+8.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
+,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+\AtBeginShipoutBox=\box47
+Package hyperref Info: Link coloring OFF on input line 14.
+
+(/usr/local/share/miktex-texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/local/share/miktex-texmf/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count272
+)
+LaTeX Info: Redefining \ref on input line 14.
+LaTeX Info: Redefining \pageref on input line 14.
+LaTeX Info: Redefining \nameref on input line 14.
+
+(./assignment3.out) (./assignment3.out)
+\@outlinefile=\write3
+
+\openout3 = assignment3.out
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 14.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 14.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 14.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 14.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 14.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 14.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 14.
+LaTeX Font Info:    Redeclaring math accent \check on input line 14.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 14.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 14.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 14.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 14.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/GFSArtemisia(0)/m/n on input line 14.
+
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 14.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/GFSArtemisia(0)/m/n on input line 14
+.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/GFSArtemisia(0)/m/n --> TU/GFSArtemisia(0)/m/n on inp
+ut line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/GFSArtemisia(0)/m/it on input line 1
+4.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/GFSArtemisia(0)/bx/n on input line 1
+4.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 14.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/GFSArtemisia(0)/m/n --> TU/GFSArtemisia(0)/bx/n on in
+put line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/GFSArtemisia(0)/bx/it on input line
+ 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 14.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-7.86334pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+(/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+
+(/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/home/kotsarelos/.miktex/texmfs/data/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+[2]
+Package epstopdf Info: Source file: <cuda2021.eps>
+(epstopdf)                    date: 2019-01-22 18:30:14
+(epstopdf)                    size: 4612 bytes
+(epstopdf)             Output file: <cuda2021-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-22 20:47:22
+(epstopdf)                    size: 10350 bytes
+(epstopdf)             Command: <epstopdf --outfile=cuda2021-eps-converted-to.pd
+f cuda2021.eps>
+(epstopdf)             \includegraphics on input line 60.
+Package epstopdf Info: Output file is already uptodate.
+<cuda2021-eps-converted-to.pdf, id=32, 853.1875pt x 711.65875pt>
+File: cuda2021-eps-converted-to.pdf Graphic file (type pdf)
+<use cuda2021-eps-converted-to.pdf>
+Package luatex.def Info: cuda2021-eps-converted-to.pdf  used on input line 60.
+(luatex.def)             Requested size: 426.59271pt x 355.8285pt.
+
+Overfull \hbox (8.33904pt too wide) in paragraph at lines 60--61
+ [] 
+ []
+
+<output.pdf, id=33, 845.04684pt x 597.50787pt>
+File: output.pdf Graphic file (type pdf)
+<use output.pdf>
+Package luatex.def Info: output.pdf  used on input line 65.
+(luatex.def)             Requested size: 422.52238pt x 298.7532pt.
+
+Overfull \hbox (4.2687pt too wide) in paragraph at lines 65--66
+ [] 
+ []
+
+[3<./cuda2021-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <cuda23.eps>
+(epstopdf)                    date: 2019-01-22 18:30:12
+(epstopdf)                    size: 2748 bytes
+(epstopdf)             Output file: <cuda23-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-22 20:47:22
+(epstopdf)                    size: 8868 bytes
+(epstopdf)             Command: <epstopdf --outfile=cuda23-eps-converted-to.pdf 
+cuda23.eps>
+(epstopdf)             \includegraphics on input line 69.
+Package epstopdf Info: Output file is already uptodate.
+<cuda23-eps-converted-to.pdf, id=50, 853.1875pt x 370.38374pt>
+File: cuda23-eps-converted-to.pdf Graphic file (type pdf)
+<use cuda23-eps-converted-to.pdf>
+Package luatex.def Info: cuda23-eps-converted-to.pdf  used on input line 69.
+(luatex.def)             Requested size: 426.59271pt x 185.1914pt.
+
+Overfull \hbox (8.33904pt too wide) in paragraph at lines 69--70
+[][] 
+ []
+
+[4<./cuda23-eps-converted-to.pdf><./output.pdf>]
+Package epstopdf Info: Source file: <threads2021.eps>
+(epstopdf)                    date: 2019-01-22 18:30:08
+(epstopdf)                    size: 4669 bytes
+(epstopdf)             Output file: <threads2021-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-22 20:53:20
+(epstopdf)                    size: 9791 bytes
+(epstopdf)             Command: <epstopdf --outfile=threads2021-eps-converted-to
+.pdf threads2021.eps>
+(epstopdf)             \includegraphics on input line 85.
+Package epstopdf Info: Output file is already uptodate.
+<threads2021-eps-converted-to.pdf, id=77, 853.1875pt x 711.65875pt>
+File: threads2021-eps-converted-to.pdf Graphic file (type pdf)
+<use threads2021-eps-converted-to.pdf>
+Package luatex.def Info: threads2021-eps-converted-to.pdf  used on input line 85
+.
+(luatex.def)             Requested size: 426.59271pt x 355.8285pt.
+
+Overfull \hbox (8.33904pt too wide) in paragraph at lines 85--86
+ [][] 
+ []
+
+Package epstopdf Info: Source file: <threads22.eps>
+(epstopdf)                    date: 2019-01-22 18:30:04
+(epstopdf)                    size: 3061 bytes
+(epstopdf)             Output file: <threads22-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-22 20:53:21
+(epstopdf)                    size: 8368 bytes
+(epstopdf)             Command: <epstopdf --outfile=threads22-eps-converted-to.p
+df threads22.eps>
+(epstopdf)             \includegraphics on input line 90.
+Package epstopdf Info: Output file is already uptodate.
+<threads22-eps-converted-to.pdf, id=78, 853.1875pt x 370.38374pt>
+File: threads22-eps-converted-to.pdf Graphic file (type pdf)
+<use threads22-eps-converted-to.pdf>
+Package luatex.def Info: threads22-eps-converted-to.pdf  used on input line 90.
+(luatex.def)             Requested size: 426.59271pt x 185.1914pt.
+
+Overfull \hbox (8.33904pt too wide) in paragraph at lines 90--91
+ [][] 
+ []
+
+[5<./threads2021-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <threads23.eps>
+(epstopdf)                    date: 2019-01-22 18:30:06
+(epstopdf)                    size: 2894 bytes
+(epstopdf)             Output file: <threads23-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-22 20:53:21
+(epstopdf)                    size: 8343 bytes
+(epstopdf)             Command: <epstopdf --outfile=threads23-eps-converted-to.p
+df threads23.eps>
+(epstopdf)             \includegraphics on input line 95.
+Package epstopdf Info: Output file is already uptodate.
+<threads23-eps-converted-to.pdf, id=94, 853.1875pt x 370.38374pt>
+File: threads23-eps-converted-to.pdf Graphic file (type pdf)
+<use threads23-eps-converted-to.pdf>
+Package luatex.def Info: threads23-eps-converted-to.pdf  used on input line 95.
+(luatex.def)             Requested size: 426.59271pt x 185.1914pt.
+
+Overfull \hbox (8.33904pt too wide) in paragraph at lines 95--96
+ [][] 
+ []
+
+[6<./threads22-eps-converted-to.pdf><./threads23-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
+
+[7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
+ (./assignment3.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
+Package rerunfilecheck Info: File `assignment3.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 17597 strings out of 494300
+ 100000,552014 words of node,token memory allocated
+ 430 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 52 glue_spec,
+ 5 attribute_list, 1 write nodes
+   avail lists: 2:232,3:67,4:18,5:55,6:16,7:3155,8:37,9:92,10:9,11:167
+ 21295 multiletter control sequences out of 65536+200000
+ 78 fonts using 10526447 bytes
+ 47i,7n,68p,778b,446s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/fonts/truetype/artemisia/GFSArtemisiaIt.otf></usr/share/fonts/truety
+pe/artemisia/GFSArtemisiaBold.otf></usr/share/fonts/truetype/artemisia/GFSArtemi
+sia.otf></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/sha
+re/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/share/miktex
+-texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/miktex-texmf/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/share/miktex-texmf/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb>
+Output written on assignment3.pdf (7 pages, 145736 bytes).
+
+PDF statistics: 164 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+

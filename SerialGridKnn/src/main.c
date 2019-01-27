@@ -23,8 +23,18 @@ void printTime(char* text, struct timeval end , struct timeval start){
  * 3rd param -> seed                (default 1,2)
 *************************************************/
 int main(int argc, char** argv){
+    long MeasuringRes[10];
+    /** 
+     * 0 -> Corpus/Query Size
+     * 1 -> grid dimensions
+     * 2 -> binning time (s)
+     * 3 -> binngin time (us)
+     * 4 -> knn time (s)
+     * 5 -> knn time (us)
+
+    */
     /*****For Time Measuring*****/
-    struct timeval tstart,tend;
+    struct timeval tstart,tend, knntimeStart, knntimeEnd, binningtimeStart, binningtimeEnd;
     gettimeofday(&tstart,NULL);
 
     int number_of_points = 5;
@@ -73,7 +83,8 @@ int main(int argc, char** argv){
     generatePoints(queries, number_of_queries, dimensions, 0, 1, 2);
 
 
-
+    /* Binning Process */
+    gettimeofday(&binningtimeStart,NULL);
     assignPointsToBlocks(points, block_of_point , points_per_block , side_block_length , number_of_points, grid_d , dimensions);
     assignPointsToBlocks(queries, block_of_query , queries_per_block , side_block_length , number_of_queries, grid_d , dimensions);
 
@@ -93,15 +104,20 @@ int main(int argc, char** argv){
     assignPointsToBlocks(grid_arranged_points, block_of_point , points_per_block , side_block_length , number_of_points, grid_d , dimensions);
     assignPointsToBlocks(grid_arranged_queries, block_of_query , queries_per_block , side_block_length , number_of_queries, grid_d , dimensions);
 
+    gettimeofday(&binningtimeEnd,NULL);
 
 
+    /*Uncomment to get print the points before the binning*/
     // printPointsToCsv("points.csv" , "w" , points , number_of_points , dimensions);
     // printPointsToCsv("queries.csv" , "w" , queries , number_of_queries , dimensions);
     free(points);
     free(queries);
     printf("binning done\n");
 
+
+    /* Searching Basic Candidates */
     gettimeofday(&tstart,NULL);
+    gettimeofday(&knntimeStart,NULL);
     float* ser_res_dists = (float*)malloc(number_of_queries*sizeof(float));
     int* ser_res_indx = (int*)malloc(number_of_queries*sizeof(int));
     for(int i = 0; i < number_of_queries; i++){
@@ -146,7 +162,7 @@ int main(int argc, char** argv){
 
 
      int counterOutCand = 0;
-   //Knn NeighbourBlocks 
+   /* Searching adjacent blocks */
     for(int q = 0; q < number_of_queries; q++){
         float max_dist = ser_res_dists[q];
         float min_dist_from_bounds = 1000;
@@ -165,9 +181,9 @@ int main(int argc, char** argv){
             counterOutCand++;
             NeighbourBlocks nb;
             getNeighbourBlocks(&nb,grid_d,&block_of_query[q*dimensions]);
-            for(int b = 0; b < nb.num_of_nbr_blocks; b++){
-                //printf("blocks of %d/%d [%d,%d,%d]\n",q,b,nb.nbr_blocks[b*dimensions],nb.nbr_blocks[b*dimensions+1],nb.nbr_blocks[b*dimensions+2]);
-            }
+            // for(int b = 0; b < nb.num_of_nbr_blocks; b++){
+            //     //printf("blocks of %d/%d [%d,%d,%d]\n",q,b,nb.nbr_blocks[b*dimensions],nb.nbr_blocks[b*dimensions+1],nb.nbr_blocks[b*dimensions+2]);
+            // }
             for(int b = 0; b < nb.num_of_nbr_blocks; b++){
                 int* currentBlock = (int*)malloc(dimensions*sizeof(int));
                 for(int i = 0; i < dimensions; i++){
@@ -178,9 +194,9 @@ int main(int argc, char** argv){
                     gridIndex += pow(grid_d,dimensions -1 -i)*currentBlock[i];
                 }
                 //printf("current block222  %d/%d ",q,b);
-                for(int i = 0; i < dimensions; i++){
-                    //printf("[%d] ",currentBlock[i]);
-                }//printf("\n");
+                // for(int i = 0; i < dimensions; i++){
+                //     //printf("[%d] ",currentBlock[i]);
+                // }//printf("\n");
                 int startingAddressOfPoints = integral_points_per_block[gridIndex];
                 int numberOfPointsInBlock = points_per_block[gridIndex];
                 float* pointToSearch = &grid_arranged_points[startingAddressOfPoints*dimensions];
@@ -196,7 +212,7 @@ int main(int argc, char** argv){
                     if(dist < ser_res_dists[q]){
                     ser_res_dists[q] = dist;
                     ser_res_indx[q] = p + startingAddressOfPoints;
-                }
+                    }
                 }
 
                 // if(q == 21721 || q == 26679){
@@ -215,11 +231,12 @@ int main(int argc, char** argv){
             free(nb.nbr_blocks);
         }
     }
-
+    gettimeofday(&knntimeEnd,NULL);
     gettimeofday(&tend,NULL);
     printTime("CPU KNN 2nd PART ",tend,tstart);
 
-     for(int i = 0; i < number_of_queries; i++){
+    /* gather knns from indices found */
+    for(int i = 0; i < number_of_queries; i++){
         memcpy(&knns[i*3], &grid_arranged_points[ser_res_indx[i]*3], 3*sizeof(float));
     }
     printPointsToCsv("knn.csv" , "w" , knns , number_of_queries , dimensions);
@@ -240,9 +257,24 @@ int main(int argc, char** argv){
     printPointsToCsv("queries_arranged.csv" , "w" , grid_arranged_queries , number_of_queries , dimensions);
 
 
-
-
-
+    MeasuringRes[0] = number_of_points;
+    MeasuringRes[1] = grid_d;
+    MeasuringRes[2] = binningtimeEnd.tv_sec - binningtimeStart.tv_sec;
+    MeasuringRes[3] = binningtimeEnd.tv_usec - binningtimeStart.tv_usec;
+    if(MeasuringRes[3] < 0){
+        MeasuringRes[3] += 1000000;
+        MeasuringRes[2]--;
+    }
+    MeasuringRes[4] = knntimeEnd.tv_sec - knntimeStart.tv_sec;
+    MeasuringRes[5] = knntimeEnd.tv_usec - knntimeStart.tv_usec;
+    if(MeasuringRes[5] < 0){
+        MeasuringRes[5] += 1000000;
+        MeasuringRes[4]--;
+    }
+    MeasuringRes[6] = 100*(float)counterOutCand/number_of_queries;
+    FILE* file = fopen("times.csv" , "a");
+    fprintf(file,"%ld,%ld,%ld,%ld,%ld,%ld,%ld\n",MeasuringRes[0],MeasuringRes[1],MeasuringRes[2],MeasuringRes[3],MeasuringRes[4],MeasuringRes[5],MeasuringRes[6]);
+    fclose(file);
     // float* points = malloc(number_of_points*dimensions*sizeof(float));
     // float* queries = malloc(number_of_queries*dimensions*sizeof(float));
     // float* grid_arranged_points = malloc(number_of_points*dimensions*sizeof(float));

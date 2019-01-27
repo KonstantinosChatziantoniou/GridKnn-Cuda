@@ -19,4 +19,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c $(DEPS)
 	$(CC) -c -o $@ $<  $(CFLAGS)
 
 clean:
-	rm -rf ./*.csv
+	rm -rf ./*.csv; rm -rf ./bin/*.o
+
+clear: 
+	rm -rf ./*.csv; rm -rf ./PythonCheck/*.csv
